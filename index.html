@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+      <div class="cotainer">
+          <form id="PRC" action="">
+    <div class="header">
+        <div class="no">
+            <h2>NO:</h2>
+            <input type="number">
+        </div>
+      <div class="c_icon">
+        <img src="./logo.png" class="icon_img" alt="icon" />
+        <h1>PRC</h1>
+      </div>
+      <div class="c_detail">
+        <h3>Patna Road Carriers Private Limited</h3>
+        <p class="c_d__address">
+          21 Phears Lane, 1st Floor, Kolkata, West Bengal 700012
+        </p>
+        <p class="c_d__phone">
+          <b>PHONE:</b> +91 (33) 2236 0334, 2236 1111,2236 5555
+        </p>
+        <p class="c_d__email">
+          <b>E-mail:</b>prpclkolkata@gmail.com |
+          <b>WEBSITE:</> www.prcpl.in
+        </p>
+      </div>
+    </div>
+    <div class="Second_column">
+    <div class="row">
+        <div class="first-row">
+        <div class="head1">
+            <h4>
+GOOD CONSIGMENTS NOTES</h4>
+</div>
+<div class="head2">
+    <h4>
+Subject To Kolkata Juridiction Only
+</h4>
+</div>
+</div>
+<div class="date_copy">
+    <div class="date">
+    <label for="date"> Date:</label>
+    <input type="text" id="date">
+    </div>
+    <div class="copy">
+        <h2 class="copy">OFFICE COPY</h2>
+    </div>
+</div>
+<div class="second-row">
+    <div class="vehicle">
+    <label for="vehicle">VEHICLE NO.</label>
+    <textarea name="vehicle" id="vehicle" placeholder="Vehicle Number please" cols="50" rows="10"></textarea>
+    </label>
+    </div>
+    <div class="location">
+        <div class="from">
+            <div class="border1">
+            <label for="from">FROM</label>
+            </div>
+    <textarea name="from" id="from" placeholder="From Area" cols="20" rows="10"></textarea>    
+            <div class="value">
+                <label for="value">VALUE ₹</label>
+                <input type="number" id="value">
+            </div>
+            <div class="at">
+                <h2>At</h2>
+            </div>
+        </div>
+        <div class="to">
+            <div class="border">
+            <label for="to">TO</label>
+            </div>
+    <textarea name="to" id="to" placeholder="To Area" cols="20" rows="10"></textarea>                
+            <div class="bmr">
+                <label for="bmr">BMR NO.</label>
+                <input type="text" id="bmr">
+            </div>
+            <div class="owner_risk">
+                <h2>owner risk</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="description">
+        <div class="notice">
+            <h3>Notices</h3>
+            <p>The consigment covered by this set of Special Lorry / Trailer Receipts Form shall be stored at the destination under the control of the Transport operator and shall be delivered to or to the order of the consignee Bank whose name is mentioned in the Lorry / Trailer Receipt. It will be under no circumstances be delivered to anyone without the written authority from the consignee Bank or its order endorsed on the consignee copy of / on a separate "Letter of Authority".</p>
+        </div>
+        <div class="insurance">
+            <h3>insurance</h3>
+            <h4>the customer has stated that</h4>
+            <input type="checkbox" name="insurance_1" id="insurance_1">
+            <label for="insurance_1">He has not insured the consigment</label>
+            <h4 class="or">OR</h4>
+            <input type="checkbox" name="insurance_2" id="insurance_2">
+            <label for="insurance_2">He has insured the consigment</label>
+            <form class="insurance_form" action="">
+                <div class="line_1">
+                    <div class="49">
+                <label for="company">
+                    COMPANY
+                </label>
+                <input type="text" name="company" id="company">
+                </div>
+                <div class="51">
+                <label for="policy">
+                    POlICY NO.
+                </label>
+                <input type="number" name="policy" id="policy">
+                </div>
+                </div>
+                <div class="line_2">
+                    <div class="49">
+                    <label for="amount">
+                     AMOUNT
+                    </label>
+                    <input type="number" name="amount" id="amount">
+                    </div>
+                    <div class="51">
+                    <label for="risk">
+                       RISK
+                    </label>
+                    <input type="text" name="risk" id="risk">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="third_column">
+        <div class="consignor">
+           <label for="consignor">
+            Consignor
+           </label>
+           <input type="text" id="consignor">      
+        </div>
+        <div class="consignee">
+        <label for="consignee">
+            Consignee
+        </label>
+        <input type="text" id="consignee">
+        </div>
+    </div>
+    <div class="fouth_column">
+        <div class="package">
+            <h4>No .of Packages</h4>
+        </div>
+        <div class="method">
+            <h4>Method of packing</h4>
+        </div>
+        <div class="contain">
+        <h4> Description (Said to contain) </h4>
+        </div>
+        <div class="weight">
+            <h5>Weight</h5>
+            <div class="check">
+            <div class="actual">
+                <h6>Actual(Kgs)</h6>
+            </div>
+            <div class="charged">
+                <h6>Charged(Kgs)</h6>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="input_row">
+    <div class="fifth_column">
+        <div class="package">
+            <input type="number">
+        </div>
+        <div class="method">
+            <input type="text">
+        </div>
+        <div class="contain">
+            <input type="text">            
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+            <input type="number">
+                </div>
+                <div class="charged">
+            <input type="number">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="btn">
+        <button id="Add">Add +1</button>
+    </div>
+    <div class="sixth_column">
+        <div class="six_1">
+            <div class="tin">
+                <label for="tin">TIN:</label>
+                <input type="text" id="tin">
+            </div>
+            <div class="cst">
+                <label for="cst">CST:</label>
+                <input type="text" id="cst">
+            </div>
+        </div>
+        <div class="six_2">
+            <label for="measure">MEASUREMENT:
+            </label>
+            <input type="text" id="measure">      
+         </div>
+    </div>
+    <div class="seventh_column">
+        <div class="sign">
+            <h4>Signature of Consignor/Agent</h4>
+        </div>
+        <div class="tax">
+            <div class="gst">
+            <p>GST PAID BY CONSIGNOR</p>
+            <input type="checkbox" name="gst" id="gst">
+            </div>
+            <div class="consigne">
+        <p> CONSIGNEE</p>
+        <input type="checkbox" name="consignee" id="consigne">
+        </div>
+        </div>
+        <div class="auth">
+            <h4>Patna Road Carriers Private Limited</h4>
+            <h4 class="Authsign">Authorised Signatory</h4>
+        </div>
+    </div>
+    <div class="eight_column">
+        <h4>GSTIN : 19AABCP9681N1ZJ  |  CIN : U60231WB1995PTC068683  |  PAN : AABCP9681N </h4>
+    </div>
+    <div class="btn">
+        <button id="print" type="submit" class="print">Print</button>
+    </div>
+    </form>
+    </div>
+    <script src="./app.js"> </script>
+  </body>
+</html>

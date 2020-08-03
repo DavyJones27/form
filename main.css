@@ -1,0 +1,404 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+  margin-top: 3rem;
+}
+input {
+  background: transparent;
+}
+input[type="text"],
+input[type="number"] {
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+textarea {
+  resize: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.cotainer {
+  /* border: 2px solid red; */
+  padding: 1rem;
+  box-sizing: border-box;
+  /* background: url("./logo.png") center/cover no-repeat fixed; */
+}
+.container {
+  /* display: block; */
+position: relative;
+ }
+.cotainer::after {
+  content: "";
+  background: url(./logo.png) center/contain no-repeat scroll;
+  opacity: 0.6;
+  top: 30rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 3fr 2fr;
+  justify-content: center;
+  align-content: end;
+}
+.icon_img {
+  width: 5rem;
+}
+.c_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c_icon h1 {
+  font-size: 5rem;
+}
+.no {
+  display: flex;
+  align-items: flex-end;
+}
+.no input {
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 1rem;
+  list-style: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.Second_column {
+  margin: 0.5rem 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid black; */
+}
+.notice {
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.notice h3,
+.insurance h3 {
+  text-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.notice p {
+  font-size: 0.8rem;
+}
+.insurance {
+  border: 2px solid black;
+  padding: 0 0.5rem;
+  border-top: none;
+  text-transform: uppercase;
+}
+.insurance label {
+  font-size: 0.8rem;
+}
+#insurance_1,
+#insurance_2 {
+  margin: 8px 10px 8px 0;
+}
+.or {
+  text-align: center;
+}
+.insurance_form {
+  margin: 0.5rem 0;
+}
+.line_1,
+.line_2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50%;
+  margin: 1rem 0;
+}
+#company,
+#policy,
+#risk,
+#amount {
+  border: none;
+  border-bottom: 1.5px dotted black;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+#risk {
+  margin-left: 3rem;
+}
+#amount {
+  margin-left: 0.5rem;
+}
+.first-row {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-auto-flow: column;
+  /* justify-content:center; */
+  /* align-items:center; */
+}
+.head1,
+.head2 {
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid black;
+  padding-top: 0.5rem;
+}
+.head2,
+.head1 {
+  border-right: none;
+}
+.date_copy {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-auto-flow: column;
+}
+.date {
+  border: 2px solid black;
+  border-top: none;
+  text-align: center;
+  /* padding:0.5rem; */
+}
+.copy {
+  border-bottom: 1.5px solid black;
+  text-align: center;
+}
+#date {
+  border: none;
+  border-bottom: 2px dotted black;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.second-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-auto-flow: column;
+}
+.vehicle {
+  border: 2px solid black;
+  border-top: none;
+}
+#vehicle {
+  border: none;
+  height: 250px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-left: 1px solid black;
+}
+.location {
+  border-bottom: 2px solid black;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  /* padding: 0.2rem 0;  */
+}
+.border1,
+.border {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+.border1 {
+  border-right: 2px solid black;
+}
+.value {
+  padding: 0.5rem;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.bmr {
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+}
+#value,
+#bmr {
+  width: 80%;
+  border: none;
+  border-bottom: 1.5px dotted black;
+}
+#from,
+#to {
+  height: 150px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+#from {
+  border-right: 2px solid black;
+}
+.at {
+  padding-right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+}
+.owner_risk {
+  text-transform: uppercase;
+}
+.third_column {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 0.5rem;
+}
+#consignor,
+#consignee {
+  border: none;
+  border-bottom: 1.5px dotted black;
+  width: 100%;
+}
+.consignor label,
+.consignee label {
+  font-size: 1.2rem;
+}
+.fouth_column {
+  border: 2px solid black;
+  border-top: none;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.8fr 0.8fr 7fr 1.4fr;
+  justify-content: center;
+  align-items: center;
+}
+.package,
+.method,
+.contain {
+  border-right: 2px solid black;
+  height: 100%;
+}
+.weight {
+  display: grid;
+}
+.weight h5 {
+  border-bottom: 2px solid black;
+}
+.check {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.45fr 0.55fr;
+}
+.actual {
+  border-right: 2px solid black;
+}
+.fifth_column {
+  border-top: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.8fr 0.8fr 7fr 1.4fr;
+  justify-content: center;
+  align-items: center;
+}
+.fifth_column input {
+  width: 100%;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.sixth_column {
+  border: 2px solid black;
+  border-top: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 4fr 6fr;
+  padding: 0.25rem;
+}
+.six_1 {
+  border-right: 2px solid black;
+}
+.tin {
+  margin-bottom: 0.2rem;
+}
+#tin,
+#cst {
+  border: none;
+  border-bottom: 1.5px dotted black;
+}
+.six_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#measure {
+  border: none;
+  border-bottom: 1.5px dotted black;
+  margin-left: 1rem;
+}
+.seventh_column {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3.8fr 2.4fr 3.8fr;
+  border: 2px solid black;
+  border-top: none;
+}
+.sign,
+.tax {
+  border-right: 2px solid black;
+}
+.sign {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.auth {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.Authsign {
+  align-self: flex-end;
+}
+.tax {
+  display: grid;
+  padding: 0.25rem;
+}
+.gst {
+  text-align: center;
+  display: flex;
+  margin: 0.5rem;
+  justify-content: flex-end;
+}
+.gst input {
+  margin: 0.1rem 0 0 1rem;
+}
+.consigne {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem;
+}
+.consigne input {
+  margin: 0.1rem 0 0 1rem;
+}
+.eight_column {
+  text-align: center;
+}
+.print {
+  font-size: 1.5rm;
+  font-weight: bold;
+  width: 80px;
+  padding: 1rem;
+  background: red;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5rem;
+}
+.print:hover {
+  background: transparent;
+}
+.print:active {
+  background: green;
+}
+.none {
+  display: none;
+}
