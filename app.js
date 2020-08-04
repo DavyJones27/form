@@ -17,7 +17,7 @@ btn.addEventListener("click", e => {
   createRow(bill, inputnumber);
   inputnumber++;
 });
-function createRow(btn, i) {
+function createRow(dom, i) {
   let parent = document.createElement("div");
   parent.classList.add("fifth_column");
   parent.innerHTML = `<div class="package">
@@ -39,8 +39,12 @@ function createRow(btn, i) {
                 </div>
             </div>
         </div>`;
-  btn.appendChild(parent);
+  dom.appendChild(parent);
 }
+// const myForm = document.getElementById("PRC");
+// for (let i = 0; i < myForm.elements.length; i++) {
+//   console.table(myForm.elements[i].value);
+// }
 const print = (dom, text) => {
   dom.addEventListener("click", e => {
     e.preventDefault();
@@ -64,8 +68,39 @@ const page = () => {
 print(consignee, copyArray[0]);
 print(consignor, copyArray[1]);
 print(driver, copyArray[2]);
-print(office, copyArray[3]);
-const myForm = document.getElementById("PRC");
-for (let i = 0; i < myForm.elements.length; i++) {
-  console.table(myForm.elements[i].name);
+// print(office, copyArray[3]);
+
+function data() {
+  const formData = {};
+  let name, value;
+  const myForm = document.getElementById("PRC");
+  for (let i = 0; i < myForm.elements.length - 5; i++) {
+    if (i === 7 || i === 8 || i === 50 || i === 51) {
+      if (myForm.elements[i].checked) {
+        value = "yes";
+      } else {
+        value = "no";
+      }
+    } else {
+      value = myForm.elements[i].value;
+    }
+    name = myForm.elements[i].name;
+    formData[name] = value;
+  }
+  console.table(formData);
+  return formData;
 }
+office.addEventListener("click", e => {
+  e.preventDefault();
+  const formData = data();
+  fetch(URL, {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+    .then(response => response.json)
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+});
