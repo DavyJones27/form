@@ -100,10 +100,10 @@ Subject To Kolkata Juridiction Only
         <div class="insurance">
             <h3>insurance</h3>
             <h4>the customer has stated that</h4>
-            <input type="checkbox" name="insurance_1" id="insurance_1">
+            <input type="checkbox"  id="insurance_1" name="not insured">
             <label for="insurance_1">He has not insured the consigment</label>
             <h4 class="or">OR</h4>
-            <input type="checkbox" name="insurance_2" id="insurance_2">
+            <input type="checkbox"  id="insurance_2" name="insured">
             <label for="insurance_2">He has insured the consigment</label>
             <!-- <form class="insurance_form" action=""> -->
                 <div class="line_1">
@@ -141,7 +141,7 @@ Subject To Kolkata Juridiction Only
     <div class="third_column">
         <div class="consignor">
            <label for="consignor">
-            Consignor <select class="gender"  name="gender">
+            Consignor <select class="gender"  name="Consignorgender">
                 <option value="Mr.">MR.</option>
                 <option value="Mrs.">Mrs.</option>
             </select>
@@ -151,7 +151,7 @@ Subject To Kolkata Juridiction Only
         <div class="consignee">
         <label for="consignee">
             Consignee
-            <select name="gender" class="gender">
+            <select name="Consigneegender" class="gender">
                 <option value="Mr.">MR.</option>
                 <option value="Mrs.">Mrs.</option>
             </select>
@@ -330,11 +330,11 @@ Subject To Kolkata Juridiction Only
         <div class="tax">
             <div class="gst">
             <p>GST PAID BY CONSIGNOR</p>
-            <input type="checkbox" name="gstbyconsignor" id="gst">
+            <input type="checkbox"  name="gstbyconsignor" id="gst">
             </div>
             <div class="consigne">
         <p> CONSIGNEE</p>
-        <input type="checkbox" name="gstbyconsignee" id="consigne">
+        <input type="checkbox"  name="gstbyconsignee" id="consigne">
         </div>
         </div>
         <div class="auth">
@@ -347,11 +347,11 @@ Subject To Kolkata Juridiction Only
     </div>
     </div>
     <div class="btn">
-        <button id="Add" class="print">Add +1</button>
-        <button id="OFFICECOPY" type="submit" class="print">OFFICE COPY</button>
-        <button class="print" type="submit" id="DRIVERCOPY">DRIVER COPY</button>
-        <button class="print" type="submit" id="CONSIGNEECOPY">CONSIGNEE COPY</button>
-        <button class="print" type="submit" id="CONSIGNORCOPY">CONSIGNOR COPY</button>
+        <button type="submit"  id="Add" class="print">Add +1</button>
+        <button type="submit"  id="OFFICECOPY" type="submit" class="print">OFFICE COPY</button>
+        <button type="submit"  class="print" type="submit" id="DRIVERCOPY">DRIVER COPY</button>
+        <button type="submit" class="print" type="submit" id="CONSIGNEECOPY">CONSIGNEE COPY</button>
+        <button type="submit"  class="print" type="submit" id="CONSIGNORCOPY">CONSIGNOR COPY</button>
     </div>
     </form>
     

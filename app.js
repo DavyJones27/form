@@ -41,10 +41,6 @@ function createRow(dom, i) {
         </div>`;
   dom.appendChild(parent);
 }
-// const myForm = document.getElementById("PRC");
-// for (let i = 0; i < myForm.elements.length; i++) {
-//   console.table(myForm.elements[i].value);
-// }
 const print = (dom, text) => {
   dom.addEventListener("click", e => {
     e.preventDefault();
@@ -68,8 +64,7 @@ const page = () => {
 print(consignee, copyArray[0]);
 print(consignor, copyArray[1]);
 print(driver, copyArray[2]);
-// print(office, copyArray[3]);
-
+print(office, copyArray[3]);
 function data() {
   const formData = {};
   let name, value;
