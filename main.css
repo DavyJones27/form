@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 body {
+  background: rgb(219, 184, 184);
   display: grid;
-  grid-template-columns: 80%;
+  /* grid-template-columns: 99%; */
   justify-content: center;
   margin-top: 3rem;
 }
-input {
+
+input,
+textarea {
   background: transparent;
 }
 input[type="text"],
@@ -29,25 +32,24 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 .cotainer {
-  /* border: 2px solid red; */
   padding: 1rem;
   box-sizing: border-box;
-  /* background: url("./logo.png") center/cover no-repeat fixed; */
 }
 .container {
   /* display: block; */
-position: relative;
- }
+  position: relative;
+}
 .cotainer::after {
   content: "";
   background: url(./logo.png) center/contain no-repeat scroll;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 30rem;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+  /* transform:scale(1.2); */
 }
 .header {
   display: grid;
@@ -92,11 +94,11 @@ position: relative;
 .notice h3,
 .insurance h3 {
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 .notice p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 .insurance {
   border: 2px solid black;
@@ -134,7 +136,7 @@ position: relative;
   padding: 0.2rem;
 }
 #risk {
-  margin-left: 3rem;
+  margin-left: 2.6rem;
 }
 #amount {
   margin-left: 0.5rem;
@@ -171,6 +173,7 @@ position: relative;
 .copy {
   border-bottom: 1.5px solid black;
   text-align: center;
+  color: red;
 }
 #date {
   border: none;
@@ -189,7 +192,7 @@ position: relative;
 }
 #vehicle {
   border: none;
-  height: 250px;
+  max-height: 250px;
   width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
@@ -250,6 +253,7 @@ position: relative;
   border-bottom: 2px solid black;
   padding: 0.5rem;
 }
+
 #consignor,
 #consignee {
   border: none;
@@ -259,6 +263,10 @@ position: relative;
 .consignor label,
 .consignee label {
   font-size: 1.2rem;
+}
+.consignee,
+.consignor {
+  margin-bottom: 0.2rem;
 }
 .fouth_column {
   border: 2px solid black;
@@ -316,8 +324,9 @@ position: relative;
 .six_1 {
   border-right: 2px solid black;
 }
-.tin {
-  margin-bottom: 0.2rem;
+.tin,
+.cst {
+  margin-bottom: 0.4rem;
 }
 #tin,
 #cst {
@@ -380,13 +389,17 @@ position: relative;
 .consigne input {
   margin: 0.1rem 0 0 1rem;
 }
+.for {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0 0.4rem 0.5rem 0;
+}
 .eight_column {
   text-align: center;
 }
 .print {
   font-size: 1.5rm;
   font-weight: bold;
-  width: 80px;
   padding: 1rem;
   background: red;
   border: 1px solid black;
@@ -399,6 +412,16 @@ position: relative;
 .print:active {
   background: green;
 }
-.none {
-  display: none;
-}
+/* @media print {
+  @page {
+    size: 8.3in 11.7in;
+    size: landscape;
+    margin: none;
+  }
+  .cotainer {
+    transform: scale(1);
+    margin: none;
+    width:  8.3in ;
+    max-height:11.7in;
+  }
+} */

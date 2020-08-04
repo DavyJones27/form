@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Form</title>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-      <div class="cotainer">
+      <div id="container" class="cotainer">
           <form id="PRC" action="">
     <div class="header">
         <div class="no">
             <h2>NO:</h2>
-            <input type="number">
+            <input type="number" name="number">
         </div>
       <div class="c_icon">
         <img src="./logo.png" class="icon_img" alt="icon" />
@@ -29,7 +30,7 @@
         </p>
         <p class="c_d__email">
           <b>E-mail:</b>prpclkolkata@gmail.com |
-          <b>WEBSITE:</> www.prcpl.in
+          <b>WEBSITE:</b> www.prcpl.in
         </p>
       </div>
     </div>
@@ -49,16 +50,16 @@ Subject To Kolkata Juridiction Only
 <div class="date_copy">
     <div class="date">
     <label for="date"> Date:</label>
-    <input type="text" id="date">
+    <input name="date" type="text" id="date">
     </div>
-    <div class="copy">
+    <div id="copy" class="copy">
         <h2 class="copy">OFFICE COPY</h2>
     </div>
 </div>
 <div class="second-row">
     <div class="vehicle">
     <label for="vehicle">VEHICLE NO.</label>
-    <textarea name="vehicle" id="vehicle" placeholder="Vehicle Number please" cols="50" rows="10"></textarea>
+    <textarea name="vehicle no" id="vehicle" placeholder="Vehicle Number please" cols="50" rows="10"></textarea>
     </label>
     </div>
     <div class="location">
@@ -69,10 +70,10 @@ Subject To Kolkata Juridiction Only
     <textarea name="from" id="from" placeholder="From Area" cols="20" rows="10"></textarea>    
             <div class="value">
                 <label for="value">VALUE ₹</label>
-                <input type="number" id="value">
+                <input name="value" type="number" id="value">
             </div>
             <div class="at">
-                <h2>At</h2>
+                <h4>At</h4>
             </div>
         </div>
         <div class="to">
@@ -82,10 +83,10 @@ Subject To Kolkata Juridiction Only
     <textarea name="to" id="to" placeholder="To Area" cols="20" rows="10"></textarea>                
             <div class="bmr">
                 <label for="bmr">BMR NO.</label>
-                <input type="text" id="bmr">
+                <input type="text" name="bmr" id="bmr">
             </div>
             <div class="owner_risk">
-                <h2>owner risk</h2>
+                <h4>owner risk</h4>
             </div>
         </div>
     </div>
@@ -104,7 +105,7 @@ Subject To Kolkata Juridiction Only
             <h4 class="or">OR</h4>
             <input type="checkbox" name="insurance_2" id="insurance_2">
             <label for="insurance_2">He has insured the consigment</label>
-            <form class="insurance_form" action="">
+            <!-- <form class="insurance_form" action=""> -->
                 <div class="line_1">
                     <div class="49">
                 <label for="company">
@@ -133,22 +134,29 @@ Subject To Kolkata Juridiction Only
                     <input type="text" name="risk" id="risk">
                     </div>
                 </div>
-            </form>
+            <!-- </form> -->
         </div>
     </div>
     </div>
     <div class="third_column">
         <div class="consignor">
            <label for="consignor">
-            Consignor
+            Consignor <select class="gender"  name="gender">
+                <option value="Mr.">MR.</option>
+                <option value="Mrs.">Mrs.</option>
+            </select>
            </label>
-           <input type="text" id="consignor">      
+           <input type="text" class="consignor" name="consignorName" id="consignor">      
         </div>
         <div class="consignee">
         <label for="consignee">
             Consignee
+            <select name="gender" class="gender">
+                <option value="Mr.">MR.</option>
+                <option value="Mrs.">Mrs.</option>
+            </select>
         </label>
-        <input type="text" id="consignee">
+        <input type="text" id="consignee" name="consigneeName" class="consignee">
         </div>
     </div>
     <div class="fouth_column">
@@ -176,44 +184,143 @@ Subject To Kolkata Juridiction Only
     <div class="input_row">
     <div class="fifth_column">
         <div class="package">
-            <input type="number">
+            <input type="number" name='package-1' class="package">
         </div>
         <div class="method">
-            <input type="text">
+            <input type="text" name="method-1" class="method">
         </div>
         <div class="contain">
-            <input type="text">            
+            <input type="text" name="contain-1">            
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-            <input type="number">
+            <input type="number" name='actual-1'>
                 </div>
                 <div class="charged">
-            <input type="number">
+            <input type="number" name='charge-1'>
+                </div>
+            </div>
+        </div>
+    </div><div class="fifth_column">
+        <div class="package">
+            <input type="number" name='package-2' class="package">
+        </div>
+        <div class="method">
+            <input type="text" name="method-2" class="method">
+        </div>
+        <div class="contain">
+            <input type="text" name="contain-2">
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+                    <input type="number" name='actual-2'>
+                </div>
+                <div class="charged">
+                    <input type="number" name='charge-2'>
+                </div>
+            </div>
+        </div>
+    </div><div class="fifth_column">
+        <div class="package">
+            <input type="number" name='package-3' class="package">
+        </div>
+        <div class="method">
+            <input type="text" name="method-3" class="method">
+        </div>
+        <div class="contain">
+            <input type="text" name="contain-3">
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+                    <input type="number" name='actual-3'>
+                </div>
+                <div class="charged">
+                    <input type="number" name='charge-3'>
+                </div>
+            </div>
+        </div>
+    </div><div class="fifth_column">
+        <div class="package">
+            <input type="number" name='package-4' class="package">
+        </div>
+        <div class="method">
+            <input type="text" name="method-4" class="method">
+        </div>
+        <div class="contain">
+            <input type="text" name="contain-4">
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+                    <input type="number" name='actual-4'>
+                </div>
+                <div class="charged">
+                    <input type="number" name='charge-4'>
+                </div>
+            </div>
+        </div>
+    </div><div class="fifth_column">
+        <div class="package">
+            <input type="number" name='package-5' class="package">
+        </div>
+        <div class="method">
+            <input type="text" name="method-5" class="method">
+        </div>
+        <div class="contain">
+            <input type="text" name="contain-5">
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+                    <input type="number" name='actual-5'>
+                </div>
+                <div class="charged">
+                    <input type="number" name='charge-5'>
+                </div>
+            </div>
+        </div>
+    </div><div class="fifth_column">
+        <div class="package">
+            <input type="number" class='package' name="package-6">
+        </div>
+        <div class="method">
+            <input type="text" class="method" name="method-6">
+        </div>
+        <div class="contain">
+            <input type="text" name="contain-6">
+        </div>
+        <div class="weight">
+            <div class="check">
+                <div class="actual">
+                    <input type="number" name='actual-6'>
+                </div>
+                <div class="charged">
+                    <input type="number" name='charge-6'>
                 </div>
             </div>
         </div>
     </div>
+    
     </div>
-    <div class="btn">
-        <button id="Add">Add +1</button>
-    </div>
+    
     <div class="sixth_column">
         <div class="six_1">
             <div class="tin">
                 <label for="tin">TIN:</label>
-                <input type="text" id="tin">
+                <input type="text" id="tin" name="tin">
             </div>
             <div class="cst">
                 <label for="cst">CST:</label>
-                <input type="text" id="cst">
+                <input type="text" id="cst" name="cst">
             </div>
         </div>
         <div class="six_2">
             <label for="measure">MEASUREMENT:
             </label>
-            <input type="text" id="measure">      
+            <input type="text" id="measure" name="measurement">      
          </div>
     </div>
     <div class="seventh_column">
@@ -223,26 +330,31 @@ Subject To Kolkata Juridiction Only
         <div class="tax">
             <div class="gst">
             <p>GST PAID BY CONSIGNOR</p>
-            <input type="checkbox" name="gst" id="gst">
+            <input type="checkbox" name="gstbyconsignor" id="gst">
             </div>
             <div class="consigne">
         <p> CONSIGNEE</p>
-        <input type="checkbox" name="consignee" id="consigne">
+        <input type="checkbox" name="gstbyconsignee" id="consigne">
         </div>
         </div>
         <div class="auth">
-            <h4>Patna Road Carriers Private Limited</h4>
+            <h4><span class="for">for</span> Patna Road Carriers Private Limited</h4>
             <h4 class="Authsign">Authorised Signatory</h4>
         </div>
     </div>
     <div class="eight_column">
         <h4>GSTIN : 19AABCP9681N1ZJ  |  CIN : U60231WB1995PTC068683  |  PAN : AABCP9681N </h4>
     </div>
+    </div>
     <div class="btn">
-        <button id="print" type="submit" class="print">Print</button>
+        <button id="Add" class="print">Add +1</button>
+        <button id="OFFICECOPY" type="submit" class="print">OFFICE COPY</button>
+        <button class="print" type="submit" id="DRIVERCOPY">DRIVER COPY</button>
+        <button class="print" type="submit" id="CONSIGNEECOPY">CONSIGNEE COPY</button>
+        <button class="print" type="submit" id="CONSIGNORCOPY">CONSIGNOR COPY</button>
     </div>
     </form>
-    </div>
+    
     <script src="./app.js"> </script>
   </body>
 </html>
