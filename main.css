@@ -397,6 +397,10 @@ input[type="number"] {
 .eight_column {
   text-align: center;
 }
+.gender {
+  background: transparent;
+  border: none;
+}
 .print {
   font-size: 1.5rm;
   font-weight: bold;

@@ -107,16 +107,12 @@ function data() {
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", e => {
   e.preventDefault();
+  DataSend = false;
   for (let i = 0; i < myForm.elements.length - 5; i++) {
     myForm.elements[i].value = "";
   }
 });
 const download = document.querySelector("#download");
-download
-  .addEventListener("click", e => {
-    e.preventDefault();
-    fetch(url)
-      .then(response => response.json())
-      .then(json => {});
-  })
-  .catch(err => console.log(err));
+download.addEventListener("click", e => {
+  e.preventDefault();
+});
