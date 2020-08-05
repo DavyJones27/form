@@ -116,3 +116,11 @@ const download = document.querySelector("#download");
 download.addEventListener("click", e => {
   e.preventDefault();
 });
+// download
+//   .addEventListener("click", e => {
+//     e.preventDefault();
+//     fetch('http://127.0.0.1:3000/download')
+//       .then(response => response.json())
+//       .then(json => {});
+//   })
+//   .catch(err => console.log(err));
