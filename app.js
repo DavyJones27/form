@@ -1,3 +1,4 @@
+const myForm = document.getElementById("PRC");
 const bill = document.querySelector(".input_row");
 const btn = document.querySelector("#Add");
 const office = document.querySelector("#OFFICECOPY");
@@ -51,6 +52,8 @@ const print = (dom, text) => {
   `;
     const formData = data();
     if (!DataSend) {
+      DataSend = true;
+      console.log(DataSend);
       fetch("http://127.0.0.1:3000/", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -58,9 +61,10 @@ const print = (dom, text) => {
           "Content-type": "application/json; charset=UTF-8"
         }
       })
-        .then(response => response.json)
+        .then(response => {
+          return response.json;
+        })
         .then(json => {
-          DataSend = true;
           console.log(json);
         })
         .catch(err => console.log(err));
@@ -85,7 +89,6 @@ print(office, copyArray[3]);
 function data() {
   const formData = {};
   let name, value;
-  const myForm = document.getElementById("PRC");
   for (let i = 0; i < myForm.elements.length - 5; i++) {
     if (i === 7 || i === 8 || i === 50 || i === 51) {
       if (myForm.elements[i].checked) {
@@ -99,36 +102,13 @@ function data() {
     name = myForm.elements[i].name;
     formData[name] = value;
   }
-  console.table(formData);
   return formData;
 }
 const reset = document.querySelector("#reset");
-reset.addEventListener("click", (e) => {
+reset.addEventListener("click", e => {
   e.preventDefault();
-  const myForm = document.getElementById("PRC");
   for (let i = 0; i < myForm.elements.length - 5; i++) {
     myForm.elements[i].value = "";
   }
 });
 const download = document.querySelector("#download");
-
-// let DataSend = false;
-// office.addEventListener("click", e => {
-//   e.preventDefault();
-// const formData = data();
-// if (!DataSend) {
-//   fetch("http://127.0.0.1:3000/", {
-//     method: "POST",
-//     body: JSON.stringify(formData),
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8"
-//     }
-//   })
-//     .then(response => response.json)
-//     .then(json => {
-//       DataSend = true;
-//       console.log(json);
-//     })
-//     .catch(err => console.log(err));
-// }
-// });
