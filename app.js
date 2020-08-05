@@ -88,7 +88,7 @@ function data() {
 office.addEventListener("click", e => {
   e.preventDefault();
   const formData = data();
-  fetch(URL, {
+  fetch('http://127.0.0.1:3000/', {
     method: "POST",
     body: JSON.stringify(formData),
     headers: {

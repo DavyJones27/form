@@ -14,7 +14,7 @@
     <div class="header">
         <div class="no">
             <h2>NO:</h2>
-            <input type="number" name="number">
+            <input type="number" name="invoice_number">
         </div>
       <div class="c_icon">
         <img src="./logo.png" class="icon_img" alt="icon" />
@@ -50,7 +50,7 @@ Subject To Kolkata Juridiction Only
 <div class="date_copy">
     <div class="date">
     <label for="date"> Date:</label>
-    <input name="date" type="text" id="date">
+    <input name="date" type="date" id="date">
     </div>
     <div id="copy" class="copy">
         <h2 class="copy">OFFICE COPY</h2>
@@ -59,7 +59,7 @@ Subject To Kolkata Juridiction Only
 <div class="second-row">
     <div class="vehicle">
     <label for="vehicle">VEHICLE NO.</label>
-    <textarea name="vehicle no" id="vehicle" placeholder="Vehicle Number please" cols="50" rows="10"></textarea>
+    <textarea name="vehicle_no" id="vehicle" placeholder="Vehicle Number please" cols="50" rows="10"></textarea>
     </label>
     </div>
     <div class="location">
@@ -83,7 +83,7 @@ Subject To Kolkata Juridiction Only
     <textarea name="to" id="to" placeholder="To Area" cols="20" rows="10"></textarea>                
             <div class="bmr">
                 <label for="bmr">BMR NO.</label>
-                <input type="text" name="bmr" id="bmr">
+                <input type="text" name="bmr_number" id="bmr">
             </div>
             <div class="owner_risk">
                 <h4>owner risk</h4>
@@ -100,7 +100,7 @@ Subject To Kolkata Juridiction Only
         <div class="insurance">
             <h3>insurance</h3>
             <h4>the customer has stated that</h4>
-            <input type="checkbox"  id="insurance_1" name="not insured">
+            <input type="checkbox"  id="insurance_1" name="not_insured">
             <label for="insurance_1">He has not insured the consigment</label>
             <h4 class="or">OR</h4>
             <input type="checkbox"  id="insurance_2" name="insured">
@@ -111,13 +111,13 @@ Subject To Kolkata Juridiction Only
                 <label for="company">
                     COMPANY
                 </label>
-                <input type="text" name="company" id="company">
+                <input type="text" name="insurance_company" id="company">
                 </div>
                 <div class="51">
                 <label for="policy">
                     POlICY NO.
                 </label>
-                <input type="number" name="policy" id="policy">
+                <input type="number" name="insurance_policy" id="policy">
                 </div>
                 </div>
                 <div class="line_2">
@@ -125,13 +125,13 @@ Subject To Kolkata Juridiction Only
                     <label for="amount">
                      AMOUNT
                     </label>
-                    <input type="number" name="amount" id="amount">
+                    <input type="number" name="insurance_amount" id="amount">
                     </div>
                     <div class="51">
                     <label for="risk">
                        RISK
                     </label>
-                    <input type="text" name="risk" id="risk">
+                    <input type="text" name="insurance_risk" id="risk">
                     </div>
                 </div>
             <!-- </form> -->
@@ -184,121 +184,121 @@ Subject To Kolkata Juridiction Only
     <div class="input_row">
     <div class="fifth_column">
         <div class="package">
-            <input type="number" name='package-1' class="package">
+            <input type="number" name='package1' class="package">
         </div>
         <div class="method">
-            <input type="text" name="method-1" class="method">
+            <input type="text" name="method1" class="method">
         </div>
         <div class="contain">
-            <input type="text" name="contain-1">            
+            <input type="text" name="contain1">            
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-            <input type="number" name='actual-1'>
+            <input type="number" name='actual1'>
                 </div>
                 <div class="charged">
-            <input type="number" name='charge-1'>
+            <input type="number" name='charge1'>
                 </div>
             </div>
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package-2' class="package">
+            <input type="number" name='package2' class="package">
         </div>
         <div class="method">
-            <input type="text" name="method-2" class="method">
+            <input type="text" name="method2" class="method">
         </div>
         <div class="contain">
-            <input type="text" name="contain-2">
+            <input type="text" name="contain2">
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-                    <input type="number" name='actual-2'>
+                    <input type="number" name='actual2'>
                 </div>
                 <div class="charged">
-                    <input type="number" name='charge-2'>
+                    <input type="number" name='charge2'>
                 </div>
             </div>
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package-3' class="package">
+            <input type="number" name='package3' class="package">
         </div>
         <div class="method">
-            <input type="text" name="method-3" class="method">
+            <input type="text" name="method3" class="method">
         </div>
         <div class="contain">
-            <input type="text" name="contain-3">
+            <input type="text" name="contain3">
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-                    <input type="number" name='actual-3'>
+                    <input type="number" name='actual3'>
                 </div>
                 <div class="charged">
-                    <input type="number" name='charge-3'>
+                    <input type="number" name='charge3'>
                 </div>
             </div>
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package-4' class="package">
+            <input type="number" name='package4' class="package">
         </div>
         <div class="method">
-            <input type="text" name="method-4" class="method">
+            <input type="text" name="method4" class="method">
         </div>
         <div class="contain">
-            <input type="text" name="contain-4">
+            <input type="text" name="contain4">
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-                    <input type="number" name='actual-4'>
+                    <input type="number" name='actual4'>
                 </div>
                 <div class="charged">
-                    <input type="number" name='charge-4'>
+                    <input type="number" name='charge4'>
                 </div>
             </div>
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package-5' class="package">
+            <input type="number" name='package5' class="package">
         </div>
         <div class="method">
-            <input type="text" name="method-5" class="method">
+            <input type="text" name="method5" class="method">
         </div>
         <div class="contain">
-            <input type="text" name="contain-5">
+            <input type="text" name="contain5">
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-                    <input type="number" name='actual-5'>
+                    <input type="number" name='actual5'>
                 </div>
                 <div class="charged">
-                    <input type="number" name='charge-5'>
+                    <input type="number" name='charge5'>
                 </div>
             </div>
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" class='package' name="package-6">
+            <input type="number" class='package' name="package6">
         </div>
         <div class="method">
-            <input type="text" class="method" name="method-6">
+            <input type="text" class="method" name="method6">
         </div>
         <div class="contain">
-            <input type="text" name="contain-6">
+            <input type="text" name="contain6">
         </div>
         <div class="weight">
             <div class="check">
                 <div class="actual">
-                    <input type="number" name='actual-6'>
+                    <input type="number" name='actual6'>
                 </div>
                 <div class="charged">
-                    <input type="number" name='charge-6'>
+                    <input type="number" name='charge6'>
                 </div>
             </div>
         </div>
@@ -310,11 +310,11 @@ Subject To Kolkata Juridiction Only
         <div class="six_1">
             <div class="tin">
                 <label for="tin">TIN:</label>
-                <input type="text" id="tin" name="tin">
+                <input type="text" id="tin" name="tin_number">
             </div>
             <div class="cst">
                 <label for="cst">CST:</label>
-                <input type="text" id="cst" name="cst">
+                <input type="text" id="cst" name="cst_number">
             </div>
         </div>
         <div class="six_2">
