@@ -41,6 +41,7 @@ function createRow(dom, i) {
         </div>`;
   dom.appendChild(parent);
 }
+let DataSend = false;
 const print = (dom, text) => {
   dom.addEventListener("click", e => {
     e.preventDefault();
@@ -48,6 +49,22 @@ const print = (dom, text) => {
     copy.innerHTML = `
         <h2 class="copy">${text}</h2>
   `;
+    const formData = data();
+    if (!DataSend) {
+      fetch("http://127.0.0.1:3000/", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json)
+        .then(json => {
+          DataSend = true;
+          console.log(json);
+        })
+        .catch(err => console.log(err));
+    }
     setTimeout(() => {
       page();
     }, 1000);
@@ -85,17 +102,33 @@ function data() {
   console.table(formData);
   return formData;
 }
-office.addEventListener("click", e => {
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", (e) => {
   e.preventDefault();
-  const formData = data();
-  fetch('http://127.0.0.1:3000/', {
-    method: "POST",
-    body: JSON.stringify(formData),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8"
-    }
-  })
-    .then(response => response.json)
-    .then(json => console.log(json))
-    .catch(err => console.log(err));
+  const myForm = document.getElementById("PRC");
+  for (let i = 0; i < myForm.elements.length - 5; i++) {
+    myForm.elements[i].value = "";
+  }
 });
+const download = document.querySelector("#download");
+
+// let DataSend = false;
+// office.addEventListener("click", e => {
+//   e.preventDefault();
+// const formData = data();
+// if (!DataSend) {
+//   fetch("http://127.0.0.1:3000/", {
+//     method: "POST",
+//     body: JSON.stringify(formData),
+//     headers: {
+//       "Content-type": "application/json; charset=UTF-8"
+//     }
+//   })
+//     .then(response => response.json)
+//     .then(json => {
+//       DataSend = true;
+//       console.log(json);
+//     })
+//     .catch(err => console.log(err));
+// }
+// });
