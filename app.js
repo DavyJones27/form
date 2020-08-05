@@ -112,3 +112,11 @@ reset.addEventListener("click", e => {
   }
 });
 const download = document.querySelector("#download");
+download
+  .addEventListener("click", e => {
+    e.preventDefault();
+    fetch(url)
+      .then(response => response.json())
+      .then(json => {});
+  })
+  .catch(err => console.log(err));
