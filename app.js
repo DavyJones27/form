@@ -113,9 +113,9 @@ reset.addEventListener("click", e => {
   }
 });
 const download = document.querySelector("#download");
-download.addEventListener("click", e => {
-  e.preventDefault();
-});
+// download.addEventListener("click", e => {
+//   e.preventDefault();
+// });
 // download
 //   .addEventListener("click", e => {
 //     e.preventDefault();
