@@ -13,35 +13,6 @@ const copyArray = [
   "OFFICE COPY"
 ];
 let inputnumber = 6;
-btn.addEventListener("click", e => {
-  e.preventDefault();
-  createRow(bill, inputnumber);
-  inputnumber++;
-});
-function createRow(dom, i) {
-  let parent = document.createElement("div");
-  parent.classList.add("fifth_column");
-  parent.innerHTML = `<div class="package">
-            <input type="number" class='package' name="package-${i}">
-        </div>
-        <div class="method">
-            <input type="text" class="method" name="method-${i}">
-        </div>
-        <div class="contain">
-            <input type="text" name="contain-${i}">
-        </div>
-        <div class="weight">
-            <div class="check">
-                <div class="actual">
-                    <input type="number" name='actual-${i}'>
-                </div>
-                <div class="charged">
-                    <input type="number" name='charge-${i}'>
-                </div>
-            </div>
-        </div>`;
-  dom.appendChild(parent);
-}
 let DataSend = false;
 const print = (dom, text) => {
   dom.addEventListener("click", e => {
@@ -112,15 +83,3 @@ reset.addEventListener("click", e => {
     myForm.elements[i].value = "";
   }
 });
-const download = document.querySelector("#download");
-download.addEventListener("click", e => {
-  e.preventDefault();
-});
-// download
-//   .addEventListener("click", e => {
-//     e.preventDefault();
-//     fetch('http://127.0.0.1:3000/download')
-//       .then(response => response.json())
-//       .then(json => {});
-//   })
-//   .catch(err => console.log(err));
