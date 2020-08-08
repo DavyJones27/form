@@ -73,7 +73,7 @@ Subject To Kolkata Juridiction Only
                 <input name="value" type="number" id="value">
             </div>
             <div class="at">
-                <h4>At</h4>
+                <h2>At</h2>
             </div>
         </div>
         <div class="to">
@@ -86,7 +86,7 @@ Subject To Kolkata Juridiction Only
                 <input type="text" name="bmr_number" id="bmr">
             </div>
             <div class="owner_risk">
-                <h4>owner risk</h4>
+                <h2>owner risk</h2  >
             </div>
         </div>
     </div>
@@ -99,10 +99,10 @@ Subject To Kolkata Juridiction Only
         </div>
         <div class="insurance">
             <h3>insurance</h3>
-            <h4>the customer has stated that</h4>
+            <h5>the customer has stated that</h5>
             <input type="checkbox"  id="insurance_1" name="not_insured">
             <label for="insurance_1">He has not insured the consigment</label>
-            <h4 class="or">OR</h4>
+            <h5 class="or">OR</h5>
             <input type="checkbox"  id="insurance_2" name="insured">
             <label for="insurance_2">He has insured the consigment</label>
             <!-- <form class="insurance_form" action=""> -->
@@ -140,15 +140,22 @@ Subject To Kolkata Juridiction Only
     </div>
     <div class="third_column">
         <div class="consignor">
+            <div class="consignorname">
            <label for="consignor">
             Consignor <select class="gender"  name="Consignorgender">
                 <option value="Mr.">MR.</option>
                 <option value="Mrs.">Mrs.</option>
             </select>
            </label>
-           <input type="text" class="consignor" name="consignorName" id="consignor">      
+           <input type="text" class="consignor" name="consignorName" id="consignor">  
+        </div>
+        <div class="consignorgstno">
+            <label for="consignorgstno">consignor GST No</label>
+            <input type="text" name="consignorgstno" id="consignorgstno">
+        </div>
         </div>
         <div class="consignee">
+            <div class="consignorname">
         <label for="consignee">
             Consignee
             <select name="Consigneegender" class="gender">
@@ -158,6 +165,12 @@ Subject To Kolkata Juridiction Only
         </label>
         <input type="text" id="consignee" name="consigneeName" class="consignee">
         </div>
+        <div class="consigneegstno">
+            <label for="consigneegstno">consignee GST No</label>
+            <input type="text" name="consigneegstno" id="consigneegstno">
+        </div>
+        </div>
+
     </div>
     <div class="fouth_column">
         <div class="package">
@@ -184,7 +197,7 @@ Subject To Kolkata Juridiction Only
     <div class="input_row">
     <div class="fifth_column">
         <div class="package">
-            <input type="number" name='package1' class="package">
+            <input type="text" name='package1' class="package">
         </div>
         <div class="method">
             <input type="text" name="method1" class="method">
@@ -204,7 +217,7 @@ Subject To Kolkata Juridiction Only
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package2' class="package">
+            <input type="text" name='package2' class="package">
         </div>
         <div class="method">
             <input type="text" name="method2" class="method">
@@ -224,7 +237,7 @@ Subject To Kolkata Juridiction Only
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package3' class="package">
+            <input type="text" name='package3' class="package">
         </div>
         <div class="method">
             <input type="text" name="method3" class="method">
@@ -244,7 +257,7 @@ Subject To Kolkata Juridiction Only
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package4' class="package">
+            <input type="text" name='package4' class="package">
         </div>
         <div class="method">
             <input type="text" name="method4" class="method">
@@ -264,7 +277,7 @@ Subject To Kolkata Juridiction Only
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" name='package5' class="package">
+            <input type="text" name='package5' class="package">
         </div>
         <div class="method">
             <input type="text" name="method5" class="method">
@@ -284,7 +297,7 @@ Subject To Kolkata Juridiction Only
         </div>
     </div><div class="fifth_column">
         <div class="package">
-            <input type="number" class='package' name="package6">
+            <input type="text" class='package' name="package6">
         </div>
         <div class="method">
             <input type="text" class="method" name="method6">
@@ -309,12 +322,8 @@ Subject To Kolkata Juridiction Only
     <div class="sixth_column">
         <div class="six_1">
             <div class="tin">
-                <label for="tin">TIN:</label>
+                <label for="tin">E-way Bill No:</label>
                 <input type="text" id="tin" name="tin_number">
-            </div>
-            <div class="cst">
-                <label for="cst">CST:</label>
-                <input type="text" id="cst" name="cst_number">
             </div>
         </div>
         <div class="six_2">

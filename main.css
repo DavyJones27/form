@@ -20,6 +20,10 @@ input[type="number"] {
   font-size: 1rem;
   padding: 0.2rem;
 }
+input[type="date"] {
+  font-size: 5rem;
+  /* padding: 0.2rem; */
+}
 textarea {
   resize: none;
 }
@@ -89,16 +93,16 @@ input[type="number"] {
 }
 .notice {
   border: 2px solid black;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 .notice h3,
 .insurance h3 {
   text-align: center;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   text-transform: uppercase;
 }
 .notice p {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 .insurance {
   border: 2px solid black;
@@ -111,20 +115,23 @@ input[type="number"] {
 }
 #insurance_1,
 #insurance_2 {
-  margin: 8px 10px 8px 0;
+  /* margin: 8px 10px 8px 0; */
 }
 .or {
   text-align: center;
 }
 .insurance_form {
-  margin: 0.5rem 0;
+  /* margin: 0.5rem 0; */
 }
 .line_1,
 .line_2 {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 50%;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+}
+.line_2{
+  margin: 0rem 0 17px 0;
 }
 #company,
 #policy,
@@ -132,8 +139,8 @@ input[type="number"] {
 #amount {
   border: none;
   border-bottom: 1.5px dotted black;
-  font-size: 1rem;
-  padding: 0.2rem;
+  /* font-size: 1rem; */
+  /* padding: 0.2rem; */
 }
 #risk {
   margin-left: 2.6rem;
@@ -177,8 +184,8 @@ input[type="number"] {
 }
 #date {
   border: none;
-  border-bottom: 2px dotted black;
-  font-size: 0.7rem;
+  /* border-bottom: 2px dotted black; */
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .second-row {
@@ -192,7 +199,7 @@ input[type="number"] {
 }
 #vehicle {
   border: none;
-  max-height: 250px;
+  max-height: 152px;
   width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
@@ -230,7 +237,7 @@ input[type="number"] {
 }
 #from,
 #to {
-  height: 150px;
+  height: 80px;
   width: 100%;
   border-bottom: 2px solid black;
   font-size: 1.5rem;
@@ -247,6 +254,9 @@ input[type="number"] {
 .owner_risk {
   text-transform: uppercase;
 }
+.at,.owner_risk{
+  font-size: 0.85rem;
+}
 .third_column {
   border-left: 2px solid black;
   border-right: 2px solid black;
@@ -254,19 +264,24 @@ input[type="number"] {
   padding: 0.5rem;
 }
 
-#consignor,
-#consignee {
+.consignor input,
+.consignee input {
   border: none;
   border-bottom: 1.5px dotted black;
-  width: 100%;
+  width: 95%;
 }
 .consignor label,
 .consignee label {
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .consignee,
 .consignor {
   margin-bottom: 0.2rem;
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: 4fr 1fr;
+  justify-content:space-between;
 }
 .fouth_column {
   border: 2px solid black;
@@ -319,17 +334,16 @@ input[type="number"] {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 4fr 6fr;
-  padding: 0.25rem;
 }
 .six_1 {
   border-right: 2px solid black;
+  text-align: center;
 }
-.tin,
-.cst {
+.tin {
+  font-style: bold;
   margin-bottom: 0.4rem;
 }
-#tin,
-#cst {
+#tin {
   border: none;
   border-bottom: 1.5px dotted black;
 }
@@ -341,7 +355,9 @@ input[type="number"] {
 #measure {
   border: none;
   border-bottom: 1.5px dotted black;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  margin-bottom: 0.4rem;
+
 }
 .seventh_column {
   display: grid;
