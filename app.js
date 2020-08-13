@@ -25,6 +25,7 @@ const print = (dom, text) => {
     if (!DataSend) {
       DataSend = true;
       console.log(DataSend);
+      //"http://ec2-13-235-91-215.ap-south-1.compute.amazonaws.com:3000/"
       fetch("http://ec2-13-235-91-215.ap-south-1.compute.amazonaws.com:3000/", {
         method: "POST",
         body: JSON.stringify(formData),
